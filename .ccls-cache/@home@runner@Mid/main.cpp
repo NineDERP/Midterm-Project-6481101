@@ -11,8 +11,7 @@ int main() {
   cin >> n;
   int *pt_sa = new int[n];
   string *pt_sn = new string[n];
-  int i, a;
-  string na;
+  int i;
   for (i = 0; i < n; i++) {
     cout << "snack " << i + 1 << " name: ";
     cin >> pt_sn[i];
@@ -40,16 +39,34 @@ int main() {
     cout << "Pets:" << endl;
     for (i = 0; i < N; i++) {
       cout << i + 1 << ". ";
-      pt_p[i].print_name(); cout<<endl;
-      switch(pt_p[i].get_hunger())
-        {
-          case 1: pt_p[i].print_name();  cout<<" is very hungry :<"<<endl; break;
-          case 2: pt_p[i].print_name();  cout<<" needs more food >:D"<<endl; break;
-          case 3: pt_p[i].print_name();  cout<<" is a bit peckish .~."<<endl; break;
-          case 4: pt_p[i].print_name();  cout<<" is full :D"<<endl; break;
-          case 5: pt_p[i].print_name();  cout<<" is bursting with food :O"<<endl; break;
-          default: pt_p[i].print_name();  cout<<" is starving ;-;"<<endl; break; 
-        }
+      pt_p[i].print_name();
+      cout << endl;
+      switch (pt_p[i].get_hunger()) {
+      case 1:
+        pt_p[i].print_name();
+        cout << " is very hungry :<" << endl;
+        break;
+      case 2:
+        pt_p[i].print_name();
+        cout << " needs more food >:D" << endl;
+        break;
+      case 3:
+        pt_p[i].print_name();
+        cout << " is a bit peckish .~." << endl;
+        break;
+      case 4:
+        pt_p[i].print_name();
+        cout << " is full :D" << endl;
+        break;
+      case 5:
+        pt_p[i].print_name();
+        cout << " is bursting with food :O" << endl;
+        break;
+      default:
+        pt_p[i].print_name();
+        cout << " is starving ;-;" << endl;
+        break;
+      }
     }
     cout << "actions" << endl;
     cout << "1.feed        2.quit" << endl;
